@@ -16,5 +16,14 @@ namespace Study.dotnetcoreMVC.Controllers
         {
             return View();
         }
+        public ViewResult ContactUs()
+        {
+            return View();
+        }
+        public ViewResult pathtest()
+        {
+            return View("Views/Shared/ContactUs.cshtml");//Absolute path
+            //return View("../Shared/ContactUs");//relative path
+        }
     }
 }
