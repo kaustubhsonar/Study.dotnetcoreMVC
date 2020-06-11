@@ -9,33 +9,19 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/Custom.css" rel="stylesheet" />
 </head>
 <body>
-    <h1>Welcome to book store</h1>
-    <p>Current time is @DateTime.Now </p>
-    <p>logo test</p>
-    <img src="~/logos/Pizza.png" class="logo" alt="Pizza" />
-    <p>logo from custom static folder </p>
-    <img src="~/AppStaticFiles/logo/tata.png" class="logo" alt="Pizza" />
-    <p>Normal calculate : @(3 + 2)</p>
-    @{
-        int first = 3;
-        int second = 2;
-        int result = first + second;
-    }
-    @if (result < 5)
-    {
-        <p>in if Result is @result</p>
-    }
-    else if (result == 5)
-    {
-        <p>in else if Result is @result</p>
-    }
-    else
-    {
-        <p>in else Result is @result</p>
-    }
-
-    <link href="~/css/Custom.css" rel="stylesheet" />
+    <div class="container">
+        <h1>Welcome to book store</h1>
+        <p class="text-info">Current time is @DateTime.Now </p>
+        <p>logo test</p>
+        <img src="~/logos/Pizza.png" class="logo" alt="Pizza" />
+        <p>logo from custom static folder </p>
+        <img src="~/AppStaticFiles/logo/tata.png" class="logo" alt="Pizza" />
+        <input type="button" name="Bootstapbutton" value="Bootstap button" class="btn btn-danger" />
+    </div>
+    
 </body>
 </html>
