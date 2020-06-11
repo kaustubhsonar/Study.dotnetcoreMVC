@@ -3,25 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Study.dotnetcoreMVC.Repository;
+using Study.dotnetcoreMVC.Models;
 
 namespace Study.dotnetcoreMVC.Controllers
 {
     public class BookController : Controller
     {
-        public string GetBooks()
+        private readonly BookRepository bookRepository = null;
+        public BookController()
         {
-            return "Getting all the books";
+            bookRepository = new BookRepository();
         }
 
-        public string GetBook(int id)
+        public List<BookModel> GetBooks()
         {
-            return $"Getting book with id = {id}";
+            return bookRepository.GetAllBooks();
+        }
+
+        public BookModel GetBook(int id)
+        {
+            return bookRepository.GetBookById(id);
         }
 
         //http://localhost:1180/book/searchbooks?name=jobs&authorname=kaustubh
-        public string SearchBooks(string name, string authorName)
+        public List<BookModel> SearchBooks(string name, string authorName)
         {
-            return $"Getting book with name = {name} and author = {authorName}";
+            return bookRepository.SearchBook(name, authorName);
         }
     }
 }
