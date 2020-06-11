@@ -16,14 +16,16 @@ namespace Study.dotnetcoreMVC.Controllers
             bookRepository = new BookRepository();
         }
 
-        public List<BookModel> GetBooks()
+        public ViewResult GetBooks()
         {
-            return bookRepository.GetAllBooks();
+            var data = bookRepository.GetAllBooks();
+            return View();
         }
 
-        public BookModel GetBook(int id)
+        public ViewResult GetBook(int id)
         {
-            return bookRepository.GetBookById(id);
+            var data = bookRepository.GetBookById(id);
+            return View();
         }
 
         //http://localhost:1180/book/searchbooks?name=jobs&authorname=kaustubh
