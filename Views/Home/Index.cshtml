@@ -14,12 +14,24 @@
     <h1>Welcome to book store</h1>
     <p>Current time is @DateTime.Now </p>
     <p>Normal calculate : @(3 + 2)</p>
-    @{ 
+    @{
         int first = 3;
         int second = 2;
         int result = first + second;
     }
-    <p>Multiline code calculate : @result</p>
-    <p>escape character kaustubh@mail.com : @@kaustubhsonar </p>
+    @if (result < 5)
+    {
+        <p>in if Result is @result</p>
+    }
+    else if (result == 5)
+    {
+        <p>in else if Result is @result</p>
+    }
+    else
+    {
+        <p>in else Result is @result</p>
+    }
+
+   
 </body>
 </html>
