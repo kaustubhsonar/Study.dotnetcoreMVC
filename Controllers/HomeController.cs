@@ -8,8 +8,11 @@ namespace Study.dotnetcoreMVC.Controllers
 {
     public class HomeController : Controller
     {
+        [ViewData]
+        public string header { get; set; }
         public ViewResult Index()
-        {
+        {            
+            header = "Welcome to bookstore.";
             return View();
         }
         public ViewResult AboutUs()
