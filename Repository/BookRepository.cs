@@ -25,12 +25,12 @@ namespace Study.dotnetcoreMVC.Repository
         private List<BookModel> DataSource()
         {
             return new List<BookModel>() {
-            new BookModel(){ Id = 1 , Title ="MVC" ,AuthorName="kaustubh" },
-            new BookModel(){ Id = 2 , Title ="Yoga" ,AuthorName="Sayali" },
-            new BookModel(){ Id = 3 , Title ="Docker" ,AuthorName="kaustubh" },
-            new BookModel(){ Id = 4 , Title ="AI" ,AuthorName="Saurabh" },
-            new BookModel(){ Id = 5 , Title ="MVC" ,AuthorName="Saurabh" },
-            new BookModel(){ Id = 6 , Title ="Ayurveda" ,AuthorName="Sayali" }
+            new BookModel(){ Id = 1 , Title ="MVC" ,AuthorName="kaustubh"  , Description="This is a detail walkthrough of the all the containts shown in the index of the book MVC"},
+            new BookModel(){ Id = 2 , Title ="Yoga" ,AuthorName="Sayali" , Description="This is a detail walkthrough of the all the containts shown in the index of the book Yoga"},
+            new BookModel(){ Id = 3 , Title ="Docker" ,AuthorName="kaustubh" ,Description="This is a detail walkthrough of the all the containts shown in the index of the book docker"},
+            new BookModel(){ Id = 4 , Title ="AI" ,AuthorName="Saurabh" ,Description="This is a detail walkthrough of the all the containts shown in the index of the book AI"},
+            new BookModel(){ Id = 5 , Title ="MVC" ,AuthorName="Saurabh" ,Description="This is a detail walkthrough of the all the containts shown in the index of the book MVC"},
+            new BookModel(){ Id = 6 , Title ="Ayurveda" ,AuthorName="Sayali" ,Description="This is a detail walkthrough of the all the containts shown in the index of the book Ayurveda"}
             };
         }
 
