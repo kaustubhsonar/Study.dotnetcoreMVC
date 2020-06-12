@@ -25,7 +25,7 @@ namespace Study.dotnetcoreMVC.Controllers
         public ViewResult GetBook(int id)
         {
             var data = bookRepository.GetBookById(id);
-            return View();
+            return View(data);
         }
 
         //http://localhost:1180/book/searchbooks?name=jobs&authorname=kaustubh
