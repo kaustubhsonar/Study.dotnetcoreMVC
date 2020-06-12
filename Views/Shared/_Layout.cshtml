@@ -52,19 +52,16 @@
         </nav>
     </header>
     <main role="main">@RenderBody()</main>
-    <footer class="border-top text-muted text-center" >
-        <div class="container" >
+    <footer class="border-top text-muted text-center">
+        <div class="container">
             Copyright &copy; Book store @DateTime.Now.Year
         </div>
     </footer>
 
+    <script src="~/lib/jquery/jquery.js"></script>
+    @RenderSection("FromIndex", required: false);
 </body>
-<script src="~/lib/jquery/jquery.js"></script>
-</html>
-<script>
-    $(document).ready(function () {
-        // alert("Page loaded");
-    });
 
-</script>
+</html>
+
 
