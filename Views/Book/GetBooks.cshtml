@@ -1,5 +1,7 @@
 ﻿@model IEnumerable<BookModel>
-
+@{
+    var parameters = new Dictionary<String, String>();
+}
 <!DOCTYPE html>
 
 <div class="container">
@@ -7,15 +9,19 @@
     <div class="row">
         @foreach (var book in Model)
         {
-        <div class="card" style="width: 18rem;">            
-            <img class="card-img-top" src="~/images/defaultCard.svg" alt="Card image cap"/>
-            <div class="card-body">
-                <h5 class="card-title">@book.Title</h5>
-                <p class="card-text">@book.Description</p>
-                <a href="/book/getbook/@book.Id" class="btn btn-primary" >View Details</a>
-                <small class="text-muted">@book.AuthorName</small>
+            if (!parameters.ContainsKey("Id"))
+                parameters.Add("Id", book.Id.ToString());
+
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="~/images/defaultCard.svg" alt="Card image cap" />
+                <div class="card-body">
+                    <h5 class="card-title">@book.Title</h5>
+                    <p class="card-text">@book.Description</p>
+                    <a asp-controller="Book" asp-action="Getbook" asp-all-route-data="parameters" 
+                       class="btn btn-primary">View Details</a>
+                    <small class="text-muted">@book.AuthorName</small>
+                </div>
             </div>
-        </div>
         }
 
 
