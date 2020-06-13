@@ -21,7 +21,7 @@ namespace Study.dotnetcoreMVC.Controllers
             var data = bookRepository.GetAllBooks();
             return View(data);
         }
-
+       
         public ViewResult GetBook(int id)
         {
             var data = bookRepository.GetBookById(id);

@@ -43,10 +43,10 @@ namespace Study.dotnetcoreMVC
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapDefaultControllerRoute();
-                //endpoints.MapGet("/", async context =>
-                //{
-                //    await context.Response.WriteAsync("Hello World!");
-                //});
+                //endpoints.MapControllerRoute(
+                //    name: "Default",
+                //    pattern: "app/{controller=Home}/{action=Index}/{id?}"
+                //    );
             });
         }
     }
